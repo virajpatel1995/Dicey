@@ -26,6 +26,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib. // connected to github
+        
+        updateDiceImage()
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,6 +37,14 @@ class ViewController: UIViewController {
 
     //Roll the Dicey button
     @IBAction func rollBtn(_ sender: UIButton) {
+        
+        updateDiceImage()
+        
+    }
+    
+    
+    
+    func updateDiceImage(){
         
         //arc4random_uniform function generates random number from 0 to 6 - 1
         
@@ -47,7 +57,6 @@ class ViewController: UIViewController {
         diceImgView2.image = UIImage(named: diceArray[randomDiceIndex2])
         
     }
-    
     
     
 }
