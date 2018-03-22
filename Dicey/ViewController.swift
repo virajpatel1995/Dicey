@@ -14,6 +14,9 @@ class ViewController: UIViewController {
     var randomDiceIndex1 : Int = 0;
     var randomDiceIndex2 : Int = 0;
 
+    //array to store all images
+    let diceArray = ["dice1", "dice2", "dice3", "dice4", "dice5", "dice6"]
+    
     @IBOutlet weak var diceImgView1: UIImageView!
     @IBOutlet weak var diceImgView2: UIImageView!
     
@@ -38,7 +41,11 @@ class ViewController: UIViewController {
         randomDiceIndex1 = Int(arc4random_uniform(6))
         randomDiceIndex2 = Int(arc4random_uniform(6))
         
-        print(randomDiceIndex2)
+        //print(randomDiceIndex2)
+        
+        diceImgView1.image = UIImage(named: diceArray[randomDiceIndex1]) // replace image
+        diceImgView2.image = UIImage(named: diceArray[randomDiceIndex2])
+        
     }
     
     
